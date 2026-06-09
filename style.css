@@ -45,7 +45,7 @@ a:hover {
 .nav__container {
    width: 100%;
    max-width: 1200px;
-   padding: 0 auto;
+   padding: 0 24px;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -110,10 +110,11 @@ li {
     text-align: center;
     border: none;
     color: #7342d6;
+    display: none;
 }
 
-menu__backdrop {
-    position: absolute;
+.menu__backdrop {
+    position: fixed;
     background-color: #242424;
     top: 0;
     left: 0; 
@@ -130,6 +131,7 @@ menu__backdrop {
 }
 
 .btn__menu--close {
+    display: block;
     position: absolute;
     right: 20px; 
     top: 10px;
@@ -184,7 +186,7 @@ h1 {
 
 h2 {
    text-align: center;
-   font-size: 32 px;
+   font-size: 32px;
    margin-bottom: 32px;
 }
 
@@ -246,7 +248,7 @@ button:active {
 }
 
 #highlights:before {
-    / * background: url(assets/wave.svg);
+    background: url(assets/wave.svg);
     content: "";
     position: absolute;
     top: 1px;
@@ -341,7 +343,7 @@ highlights:after {
    margin-bottom: 16px;
 }
 
-/ *
+/*
 
 FEATURES
 
@@ -445,7 +447,11 @@ footer {
 }
 
 @media (max-width: 550px) {
-    .nav__links {
-        display: none;
-    }
+  .btn__menu {
+    display: block;
+  }
+
+  .nav__links {
+    display: none;
+  }
 }
